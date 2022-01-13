@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "MemoryStage.C": "cpp",
+        "PipeReg.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

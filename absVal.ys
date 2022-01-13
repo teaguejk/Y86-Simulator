@@ -1,0 +1,68 @@
+#Put your code here. You'll need some 
+#initialization code and then five chunks
+#of code that are basically identical.
+# Execution begins at address 0 
+      .pos 0
+      
+      irmovq 0, %r14
+      irmovq -1, %r13
+      irmovq 1, %r12
+      irmovq 8, %r11
+      irmovq list, %rbx
+      addq %r14, %rax
+     
+      mrmovq (%rbx), %rax
+      mrmovq (%rbx), %rcx
+      xorq %r13, %rax
+      addq %r12, %rax
+      addq %r14, %rax
+      cmovg %rax, %rcx
+      rmmovq %rcx, (%rbx)   
+     
+      addq %r11, %rbx
+      mrmovq (%rbx), %rax
+      mrmovq (%rbx), %rcx
+      addq %r14, %rax
+      xorq %r13, %rax
+      addq %r12, %rax
+      addq %r14, %rax
+      cmovg %rax, %rcx
+      rmmovq %rcx, (%rbx)
+     
+      addq %r11, %rbx
+      mrmovq (%rbx), %rax
+      mrmovq (%rbx), %rcx
+      addq %r14, %rax
+      xorq %r13, %rax
+      addq %r12, %rax
+      addq %r14, %rax
+      cmovg %rax, %rcx
+      rmmovq %rcx, (%rbx)
+     
+      addq %r11, %rbx
+      mrmovq (%rbx), %rax
+      mrmovq (%rbx), %rcx
+      addq %r14, %rax
+      xorq %r13, %rax
+      addq %r12, %rax
+      addq %r14, %rax
+      cmovg %rax, %rcx
+      rmmovq %rcx, (%rbx)
+    
+      addq %r11, %rbx
+      mrmovq (%rbx), %rax
+      mrmovq (%rbx), %rcx
+      addq %r14, %rax
+      xorq %r13, %rax
+      addq %r12, %rax
+      addq %r14, %rax
+      cmovg %rax, %rcx
+      rmmovq %rcx, (%rbx)
+       
+      .align 8
+list: .quad -2            #at end: 2
+      .quad 5             #at end: 5 
+      .quad -15           #at end: f
+      .quad 0             #at end: 0
+      .quad -1            #at end: 1
+       
